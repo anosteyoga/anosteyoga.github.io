@@ -1,164 +1,98 @@
+# Hugo Story
+## A (modular, highly tweakable) responsive one-page theme for Hugo.
 
-# Easy Setup (Hugo + Netlify + Forestry) 🚀
+![](images/device-screenshots.png)
 
-Build your website with sicily theme by following this easy steps (No Coding Required)
+Hugo Story is a port of the static HTML template Story by HTML5 UP. It is designed to mirror the look and feel of the original template as closely as possible while incorporating some of the features Hugo has to offer.
 
-  
+This theme is designed for those who are comfortable editing HTML and integrating Hugo short codes and variables to customize the theme to their liking.
 
-<a  href="http://bit.ly/meghna-hugo-installation"  target="_blank"  title="meghna hugo installation"  rel="nofollow"><img  width="100%"  src="https://user-images.githubusercontent.com/37659754/70844354-4028be00-1e6a-11ea-8d84-02e9a25e7db8.png"></a>
+## Features
 
-  
-  
-
-## Table of Contents
-
-  
-
--  [Demo](#demo)
-
--  [Quick Start](#quick-start)
-
--  [Installation](#installation)
-
--  [Reporting Issues](#reporting-issues)
-
--  [Technical Support or Questions](#technical-support-or-questions)
-
--  [Licensing](#licensing)
-
--  [Need some specific?](https://www.cristianmarint.com/contacto.html)
-
-  
-
-### What you need !!
-
-  
-
-1. Git account (Ex: Github, Gitlab etc ) . In our case we use github.
-
-2.  [Netlify](https://bit.ly/netlify-account) account to host files and add custom domain .
-
-3.  [Forestry](https://bit.ly/forestry-account) account to maintain whole project without code.
-
-  
-  
-
-### Step 1 : Fork or Clone repository
-
-  
-
-First we will fork this [sicily](https://github.com/cristianmarint/sicily-hugo-theme) template.
-
-  
-
-### Step 2 : Add your repository in Forestry
-
-  
-
-Go to your [forestry](https://bit.ly/forestry-account) account and click on `import your site now`. declare your config.toml file [`exampleSite`] and fill up basic settings .
-
-  
-
-**Or just click this button for one click installation**  [![import to forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=cristianmarint/sicily-hugo-theme&engine=hugo&version=0.60.1&config=exampleSite)
-
-  
-
-Now mark everything as done, then go to configuration to change the base url . You can put any url but this have to similar as netlify . So for now put a name which you are going to put in netlify as netlify subdomain.
-
-  
-
-### Step 3 : Setup and host website with Netlify
-
-  
-
-Here comes the last step . Go to your [netlify](https://bit.ly/netlify-account) account and click add new site . Choose your git repository to import your website in netlify . And now you can see the forked `sicily` theme. select it and follow the steps. Then go to `site settings` for change the site name and put your subdomain name here what you puted on forestry as base url. save it and go to `deploy` from top menu, Wait a while and click on `site preview` or just simply go to the subdomain you puted as base url. **BOOM! Your site is live.** Now you can go to forestry and add, remove or customize every setting and content.
-
-  
-
-> If you face any issue regarding the installation feel free to onen [open a new issue](https://github.com/cristianmarint/sicily-hugo-theme/issues)
-
-  
-  
+- Minimalist Design
+- Fully Responsive
+- Templates
+  - Header
+  - Footer
+  - FootScripts
+  - Favicon
+- Partials for each element type
+  - Banner
+  - Spotlight
+  - Gallery
+  - Items
+- Image gallery
+- Short Codes
+  - Site Title
+  - Site Subtitle
+  - Site Logo
+  - Social Icons
+- Favicon and Social icons
+- FontAwesome Icon Support
+- SASS and AutoMinify Support
+- Google Analytics Support
 
 ## Demo
+https://caressofsteel.github.io/demos/hugo/hugo-story/
+## Using
+### 1. Install Hugo
 
-  
+[Install Hugo (Extended Version)](https://gohugo.io/overview/installing/)
+    
+> _This theme uses Hugo Pipes to compile SCSS & Sass so you'll have to use the **extended** version of Hugo. See the official [Hugo Quick Start Guide](https://gohugo.io/getting-started/quick-start/) for more information._
+### 2. Create a new site
 
-[Live Preview](https://sicily-hugo-theme.netlify.app/).
-
-  
-
-## Quick Start
-
-Quick start options:
-
-  
-
-- Clone the repo: `git clone https://github.com/cristianmarint/sicily-hugo-theme.git`.
-
--  [Download from Github](https://github.com/cristianmarint/sicily-hugo-theme/archive/master.zip).
-
-  
-
-## Installation
-
-At the top we have shown an easy hugo installation. but still if you think you want to go with the traditional way then use the following commands:
-
-  
+``` 
+hugo new site story-examplesite
+```
+### 3. Clone this Git repository
 
 ```
-
-git clone git@github.com:cristianmarint/sicily-hugo-theme.git
-
-cd sicily-hugo-theme/exampleSite/
-
-hugo server --themesDir ../..
-
+cd story-examplesite
+git clone https://github.com/caressofsteel/hugo-story.git themes/hugo-story
 ```
 
-  
-  
+> _Hint: See a note for non-Git users [here](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)._
+### 4. Copy `data` and `config.toml` with overwrite from `exampleSite`
+```
+cp -r themes/hugo-story/exampleSite/data ./
+cp themes/hugo-story/exampleSite/config.toml ./
+```
+> _Hint: Using `config.toml` tells Hugo to use the theme and sets some basic theme parameters._
 
-## Reporting Issues
+> _Hint: Using `data` provides default content for the site._
+### 5. Start Hugo Server
+```
+hugo server
+```
+### 6. Open Hugo Server in your browser
+```
+http://localhost:1313/
+```
+Here you'll see the site running on the local Hugo server. You can now make changes to and Hugo will rebuild the site automatically.
 
-  
+> _Hint: A copy of the default generated site is located in the _`originalStorySite`_ folder should you need to reference it._
 
-We use GitHub Issues as the official bug tracker for the **sicily**. Please Search [existing issues](https://github.com/cristianmarint/sicily-hugo-theme/issues). It’s possible someone has already reported the same problem.
+### 7. Further steps
 
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/cristianmarint/sicily-hugo-theme/issues/new)
+- Change the contents of `YML` files in the `data` folder. 
+  - _Altering `banner.yml` will change the top block on the site. See more details [here](https://gohugo.io/templates/data-templates/)._
 
-  
+- Create a custom site layout.
+  - Copy the default `index.html`.
 
-## Technical Support or Questions 
+    ```
+    cp themes/hugo-story/layouts/index.html layouts/
+    ```
+  - By manipulating the the `{{ partial ... }}` tags within this file you can create a custom layout for the site. See more details [here](https://gohugo.io/templates/partials/).
 
-  
+- Continue exploring Hugo and the template!
+## Credits
 
-If you have questions or need help, opening an issue is the way to go!
+This theme was created using the _Story_ template by [HTML5 UP](https://html5up.net/uploads/demos/story/).
 
-  
+## License
 
-## Licensing
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" class="license-button"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png"></a>
 
-  
-
-- Copyright 2020 Designed & Developed by [cristianmarint](https://cristianmarint.com/) & [Gethugothemes](https://gethugothemes.com/)
-
-- Licensed under [MIT](https://github.com/cristianmarint/sicily-hugo-theme/blob/master/LICENSE)
-
-  
-
-### Donate Us (Author)
-
-This project needs you! If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, feel free to donate. Your donation is highly appreciated . Thank you!
-
-  
-
-*  **[Donate $10](https://www.paypal.me/cristianmarint/10USD)**: Thank's for creating this project, here's a tea (or some juice) for you!
-
-*  **[Donate $100](https://www.paypal.me/cristianmarint/100USD)**: You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
-
-*  **[Donate $1500](https://www.paypal.me/cristianmarint/1500USD)**: Go buddy, buy Macbook Pro for yourself!
-
-  
-
-Of course, you can also choose what you want to donate, all donations are awesome !
+This Hugo theme is licensed under the [Creative Commons Attribution 3.0 License](LICENSE).

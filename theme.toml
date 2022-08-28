@@ -1,17 +1,21 @@
-name = "Sicily"
-license = "MIT"
-licenselink = "https://github.com/cristianmarint/Sicily-hugo-theme/blob/master/LICENSE"
-description = "Sicily's Hugo theme for companies. It is very stylish, responsive and ready to use theme. You can use this theme to create your contemporary web design studio, creative agency. This theme has a very creative and well decorated landing page, Blog page, Contact page and many more."
-homepage = "https://github.com/cristianmarint/sicily-hugo-theme"
-tags = ['landing-page', 'fast', 'light', 'white', 'modern', 'cristianmarint', 'hugo-theme', 'hugo-templates', 'bootstrap', 'blog', 'responsive', 'clean', 'simple', 'creative', 'contact-form', 'custom-themes', 'mobile', 'minimalistic', 'pages', 'google analytics', 'customizable', 'flexbox', 'presentation', 'product', 'theme', 'typography']
-features = ['bootstrap','responsive']
-min_version = "0.64.0"
+name = "Hugo Story"
+description = "A (modular, highly tweakable) responsive one-page theme for Hugo."
+homepage = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
+
+min_version = "0.67.3 Extended"
+tags = ["blog","clean","html5up","modular","one-page","portfolio","responsive"]
+features = ["font-awesome","favicon","one-page","responsive","sass","scss"]
+
+license = "Creative Commons"
+licenselink = "https://github.com/caressofsteel/hugo-story/blob/master/LICENSE"
 
 [author]
-  name = "cristianmarint"
-  homepage = "https://www.cristianmarint.com/"
+    name = "caressofsteel"
+    homepage = "https://github.com/caressofsteel"
+    repo = "https://github.com/caressofsteel/hugo-story"
 
+# If porting an existing theme
 [original]
-  name = "bigspring"
-  homepage = "http://demo.themefisher.com/bigspring-hugo/"
-  repo = "https://github.com/themefisher/bigspring-hugo-startup-theme"
+    author = "HTML5UP"
+    homepage = "https://html5up.net"
+    repo = "https://html5up.net/story"
